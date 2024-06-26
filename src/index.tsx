@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/app/app';
+import App from './components/App/App';
 
 
-interface CardProps {
+interface AppProps {
   id: number;
   imgPath: string;
   count: number;
@@ -12,7 +12,7 @@ interface CardProps {
   mark?: string;
 }
 
-const cardsMain: CardProps[] = [
+const cardsMain: AppProps[] = [
   {
     id: 1,
     imgPath: 'img/apartment-01.jpg',
@@ -50,7 +50,7 @@ const cardsMain: CardProps[] = [
   }
 ];
 
-const cardsFavorites: CardProps[] = [
+const cardsFavorites: AppProps[] = [
   {
     id: 1,
     imgPath: 'img/apartment-01.jpg',
@@ -68,7 +68,7 @@ const cardsFavorites: CardProps[] = [
   }
 ];
 
-const cardsFavoritesAnotherCity: CardProps[] = [
+const cardsFavoritesAnotherCity: AppProps[] = [
   {
     id: 1,
     imgPath: 'img/apartment-01.jpg',
