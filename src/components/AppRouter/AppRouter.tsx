@@ -24,14 +24,15 @@ const AppRouter: React.FC<AppRouterProps> = ({cardsMain, cardsFavorites, cardsAn
         <Route path='/' element={<Layout/>}>
           <Route index element={<MainPage cards={cardsMain}/>}/>
 
-          <PrivateRoute>
-            <Route path='favorites'
-                   element={
+
+          <Route path='favorites'
+                 element={
+                   <PrivateRoute>
                      <FavoritesPage
                        cards={cardsFavorites}
                        cardsAnotherCity={cardsAnotherCity}/>
-                   }/>
-          </PrivateRoute>
+                   </PrivateRoute>
+                 }/>
 
           <Route path='offer'>
             <Route index element={<Room/>}/>
