@@ -1,7 +1,7 @@
 import React from 'react';
-import {CardCityProps} from "../../types/commonTypes";
+import {CardCity} from "../../types/commonTypes";
 
-const FavoritesCard: React.FC<CardCityProps> = ({imgPath, price, name, type, mark}) => (
+const FavoritesCard: React.FC<CardCity> = ({imgPath, price, name, type, mark}) => (
   <article className="favorites__card place-card">
     <div className="place-card__mark">
       <span>{mark}</span>

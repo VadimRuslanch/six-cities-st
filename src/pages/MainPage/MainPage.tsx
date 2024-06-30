@@ -1,9 +1,9 @@
 import MainCard from '../../components/MainCard/MainCard';
 import React from 'react';
-import {CardsCityProps} from "../../types/commonTypes";
+import {CardCity} from "../../types/commonTypes";
 
 interface CityCard {
-  cards: CardsCityProps[];
+  cards: CardCity[];
 }
 
 const MainPage: React.FC<CityCard> = ({cards}) => (
@@ -67,7 +67,7 @@ const MainPage: React.FC<CityCard> = ({cards}) => (
               </ul>
             </form>
             <div className="cities__places-list places__list tabs__content">
-              {cards.map((card: CardsCityProps) => (
+              {cards.map((card: CardCity) => (
                 <MainCard
                   key={card.id}
                   imgPath={card.imgPath}

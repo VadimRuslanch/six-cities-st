@@ -1,7 +1,7 @@
 import React from 'react';
-import {CardCityProps} from "../../types/commonTypes";
+import {CardCity} from "../../types/commonTypes";
 
-const MainCard: React.FC<CardCityProps> = ({imgPath, price, name, type}) => {
+const MainCard: React.FC<CardCity> = ({imgPath, price, name, type}) => {
   return (
     <article className="cities__card place-card">
       <div className="cities__image-wrapper place-card__image-wrapper">

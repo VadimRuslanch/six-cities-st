@@ -1,10 +1,10 @@
 import React from 'react';
 import FavoritesCard from '../../components/FavoritesCard/FavoritesCard';
-import {CardsCityProps} from "../../types/commonTypes";
+import {CardCity} from "../../types/commonTypes";
 
 interface CityCard {
-  cards: CardsCityProps[];
-  cardsAnotherCity: CardsCityProps[];
+  cards: CardCity[];
+  cardsAnotherCity: CardCity[];
 }
 
 const FavoritesPage: React.FC<CityCard> = (
@@ -26,7 +26,7 @@ const FavoritesPage: React.FC<CityCard> = (
               </div>
             </div>
             <div className="favorites__places">
-              {cards.map((card: CardsCityProps) => (
+              {cards.map((card: CardCity) => (
                 <FavoritesCard
                   key={card.id}
                   imgPath={card.imgPath}
@@ -48,7 +48,7 @@ const FavoritesPage: React.FC<CityCard> = (
               </div>
             </div>
             <div className="favorites__places">
-              {cardsAnotherCity.map((card: CardsCityProps) => (
+              {cardsAnotherCity.map((card: CardCity) => (
                 <FavoritesCard
                   key={card.id}
                   imgPath={card.imgPath}

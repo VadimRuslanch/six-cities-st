@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
-import {CardsCityProps} from "../../types/commonTypes";
+import {CardCity} from "../../types/commonTypes";
 import MainPage from '../../pages/MainPage/MainPage';
 import FavoritesPage from '../../pages/FavoritesPage/FavoritesPage';
 import Layout from "../Layout/Layout";
@@ -10,9 +10,9 @@ import Room from "../../pages/Room/Room";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 interface AppRouterProps {
-  cardsMain: CardsCityProps[];
-  cardsFavorites: CardsCityProps[];
-  cardsAnotherCity: CardsCityProps[];
+  cardsMain: CardCity[];
+  cardsFavorites: CardCity[];
+  cardsAnotherCity: CardCity[];
 }
 
 
@@ -35,7 +35,6 @@ const AppRouter: React.FC<AppRouterProps> = ({cardsMain, cardsFavorites, cardsAn
                  }/>
 
           <Route path='offer'>
-            <Route index element={<Room/>}/>
             <Route path=':id' element={<Room/>}/>
           </Route>
 

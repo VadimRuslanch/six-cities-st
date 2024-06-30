@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/App/App';
-import {CardsCityProps} from "./types/commonTypes";
+import {CardCity} from "./types/commonTypes";
 
-const cardsMain: CardsCityProps[] = [
+const cardsMain: CardCity[] = [
   {
     id: 1,
     imgPath: 'img/apartment-01.jpg',
@@ -41,7 +41,7 @@ const cardsMain: CardsCityProps[] = [
   }
 ];
 
-const cardsFavorites: CardsCityProps[] = [
+const cardsFavorites: CardCity[] = [
   {
     id: 1,
     imgPath: 'img/apartment-01.jpg',
@@ -59,7 +59,7 @@ const cardsFavorites: CardsCityProps[] = [
   }
 ];
 
-const cardsFavoritesAnotherCity: CardsCityProps[] = [
+const cardsFavoritesAnotherCity: CardCity[] = [
   {
     id: 1,
     imgPath: 'img/apartment-01.jpg',

@@ -1,10 +1,11 @@
-import {CardsCityProps} from "../../types/commonTypes";
+import {CardCity} from "../../types/commonTypes";
 import AppRouter from "../AppRouter/AppRouter";
+import React from "react";
 
 interface AppProps {
-  cardsMain: CardsCityProps[];
-  cardsFavorites: CardsCityProps[];
-  cardsFavoritesAnotherCity: CardsCityProps[];
+  cardsMain: CardCity[];
+  cardsFavorites: CardCity[];
+  cardsFavoritesAnotherCity: CardCity[];
 }
 
 const App: React.FC<AppProps> = (
