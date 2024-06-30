@@ -1,13 +1,7 @@
 import React from 'react';
+import {CardCityProps} from "../../types/commonTypes";
 
-interface MainCardProps {
-  imgPath: string;
-  count: number;
-  name: string;
-  type: string;
-}
-
-const MainCard: React.FC<MainCardProps> = ({imgPath, count, name, type}) => {
+const MainCard: React.FC<CardCityProps> = ({imgPath, price, name, type}) => {
   return (
     <article className="cities__card place-card">
       <div className="cities__image-wrapper place-card__image-wrapper">
@@ -18,7 +12,7 @@ const MainCard: React.FC<MainCardProps> = ({imgPath, count, name, type}) => {
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
-            <b className="place-card__price-value">&euro;{count}</b>
+            <b className="place-card__price-value">&euro;{price}</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
           <button className="place-card__bookmark-button place-card__bookmark-button--active button"

@@ -1,14 +1,7 @@
 import React from 'react';
+import {CardCityProps} from "../../types/commonTypes";
 
-interface FavoritesCardProps {
-  imgPath: string;
-  count: number;
-  name: string;
-  type: string;
-  mark?: string;
-}
-
-const FavoritesCard: React.FC<FavoritesCardProps> = ({imgPath, count, name, type, mark}) => (
+const FavoritesCard: React.FC<CardCityProps> = ({imgPath, price, name, type, mark}) => (
   <article className="favorites__card place-card">
     <div className="place-card__mark">
       <span>{mark}</span>
@@ -23,7 +16,7 @@ const FavoritesCard: React.FC<FavoritesCardProps> = ({imgPath, count, name, type
     <div className="favorites__card-info place-card__info">
       <div className="place-card__price-wrapper">
         <div className="place-card__price">
-          <b className="place-card__price-value">&euro;{count}</b>
+          <b className="place-card__price-value">&euro;{price}</b>
           <span className="place-card__price-text">&#47;&nbsp;night</span>
         </div>
         <button className="place-card__bookmark-button place-card__bookmark-button--active button"

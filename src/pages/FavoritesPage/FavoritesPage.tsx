@@ -1,21 +1,17 @@
 import React from 'react';
 import FavoritesCard from '../../components/FavoritesCard/FavoritesCard';
+import {CardsCityProps} from "../../types/commonTypes";
 
-interface FavoritesPageProps {
-  id: number;
-  imgPath: string;
-  count: number;
-  name: string;
-  type: string;
-  mark?: string;
+interface CityCard {
+  cards: CardsCityProps[];
+  cardsAnotherCity: CardsCityProps[];
 }
 
-interface FavoritesPagePropsArray {
-  cards: FavoritesPageProps[];
-  cardsAnotherCity: FavoritesPageProps[];
-}
-
-const FavoritesPage: React.FC<FavoritesPagePropsArray> = ({cards, cardsAnotherCity}) => (
+const FavoritesPage: React.FC<CityCard> = (
+  {
+    cards,
+    cardsAnotherCity
+  }) => (
   <main className="page__main page__main--favorites">
     <div className="page__favorites-container container">
       <section className="favorites">
@@ -30,11 +26,11 @@ const FavoritesPage: React.FC<FavoritesPagePropsArray> = ({cards, cardsAnotherCi
               </div>
             </div>
             <div className="favorites__places">
-              {cards.map((card: FavoritesPageProps) => (
+              {cards.map((card: CardsCityProps) => (
                 <FavoritesCard
                   key={card.id}
                   imgPath={card.imgPath}
-                  count={card.count}
+                  price={card.price}
                   name={card.name}
                   type={card.type}
                   mark={card.mark}
@@ -52,11 +48,11 @@ const FavoritesPage: React.FC<FavoritesPagePropsArray> = ({cards, cardsAnotherCi
               </div>
             </div>
             <div className="favorites__places">
-              {cardsAnotherCity.map((card: FavoritesPageProps) => (
+              {cardsAnotherCity.map((card: CardsCityProps) => (
                 <FavoritesCard
                   key={card.id}
                   imgPath={card.imgPath}
-                  count={card.count}
+                  price={card.price}
                   name={card.name}
                   type={card.type}
                   mark={card.mark}

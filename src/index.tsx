@@ -1,60 +1,51 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/App/App';
+import {CardsCityProps} from "./types/commonTypes";
 
-
-interface AppProps {
-  id: number;
-  imgPath: string;
-  count: number;
-  name: string;
-  type: string;
-  mark?: string;
-}
-
-const cardsMain: AppProps[] = [
+const cardsMain: CardsCityProps[] = [
   {
     id: 1,
     imgPath: 'img/apartment-01.jpg',
-    count: 120,
+    price: 120,
     name: 'Beautiful &amp; luxurious apartment at great location',
     type: 'Apartment'
   },
   {
     id: 2,
     imgPath: 'img/room.jpg',
-    count: 80,
+    price: 80,
     name: 'Wood and stone place',
     type: 'Private room'
   },
   {
     id: 3,
     imgPath: 'img/apartment-02.jpg',
-    count: 132,
+    price: 132,
     name: 'Canal View Prinsengracht',
     type: 'Apartment'
   },
   {
     id: 4,
     imgPath: 'img/apartment-03.jpg',
-    count: 180,
+    price: 180,
     name: 'Nice, cozy, warm big bed apartment',
     type: 'Apartment'
   },
   {
     id: 5,
     imgPath: 'img/room.jpg',
-    count: 80,
+    price: 80,
     name: 'Wood and stone place',
     type: 'Private room'
   }
 ];
 
-const cardsFavorites: AppProps[] = [
+const cardsFavorites: CardsCityProps[] = [
   {
     id: 1,
     imgPath: 'img/apartment-01.jpg',
-    count: 80,
+    price: 80,
     name: 'Wood and stone place',
     type: 'Apartment',
     mark: 'Premium'
@@ -62,17 +53,17 @@ const cardsFavorites: AppProps[] = [
   {
     id: 2,
     imgPath: 'img/apartment-01.jpg',
-    count: 80,
+    price: 80,
     name: 'Wood and stone place',
     type: 'Apartment'
   }
 ];
 
-const cardsFavoritesAnotherCity: AppProps[] = [
+const cardsFavoritesAnotherCity: CardsCityProps[] = [
   {
     id: 1,
     imgPath: 'img/apartment-01.jpg',
-    count: 80,
+    price: 80,
     name: 'Wood and stone place',
     type: 'Apartment'
   }

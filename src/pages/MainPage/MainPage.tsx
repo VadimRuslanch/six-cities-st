@@ -1,19 +1,12 @@
 import MainCard from '../../components/MainCard/MainCard';
 import React from 'react';
+import {CardsCityProps} from "../../types/commonTypes";
 
-interface MainPageProps {
-  id: number;
-  imgPath: string;
-  count: number;
-  name: string;
-  type: string;
+interface CityCard {
+  cards: CardsCityProps[];
 }
 
-interface MainPagePropsArray {
-  cards: MainPageProps[];
-}
-
-const MainPage: React.FC<MainPagePropsArray> = ({cards}) => (
+const MainPage: React.FC<CityCard> = ({cards}) => (
   <div className="page page--gray page--main">
     <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>
@@ -74,11 +67,11 @@ const MainPage: React.FC<MainPagePropsArray> = ({cards}) => (
               </ul>
             </form>
             <div className="cities__places-list places__list tabs__content">
-              {cards.map((card: MainPageProps) => (
+              {cards.map((card: CardsCityProps) => (
                 <MainCard
                   key={card.id}
                   imgPath={card.imgPath}
-                  count={card.count}
+                  price={card.price}
                   name={card.name}
                   type={card.type}
                 />))}

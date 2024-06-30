@@ -1,29 +1,22 @@
-import MainPage from '../../pages/MainPage/MainPage';
-import React from 'react';
-import Header from '../Header/Header';
-import FavoritesPage from '../../pages/FavoritesPage/FavoritesPage';
+import {CardsCityProps} from "../../types/commonTypes";
+import AppRouter from "../AppRouter/AppRouter";
 
 interface AppProps {
-  id: number;
-  imgPath: string;
-  count: number;
-  name: string;
-  type: string;
-  class?: string;
+  cardsMain: CardsCityProps[];
+  cardsFavorites: CardsCityProps[];
+  cardsFavoritesAnotherCity: CardsCityProps[];
 }
 
-interface MainPageProps {
-  cardsMain: AppProps[];
-  cardsFavorites: AppProps[];
-  cardsFavoritesAnotherCity: AppProps[];
-}
-
-const App: React.FC<MainPageProps> = ({cardsMain, cardsFavorites, cardsFavoritesAnotherCity}) => (
-  <>
-    <Header/>
-    <MainPage cards={cardsMain}/>
-    <FavoritesPage cards={cardsFavorites} cardsAnotherCity={cardsFavoritesAnotherCity}/>
-  </>
+const App: React.FC<AppProps> = (
+  {
+    cardsMain,
+    cardsFavorites,
+    cardsFavoritesAnotherCity
+  }) => (
+  <AppRouter cardsMain={cardsMain}
+             cardsFavorites={cardsFavorites}
+             cardsAnotherCity={cardsFavoritesAnotherCity}
+  />
 );
 
 export default App;
