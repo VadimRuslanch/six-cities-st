@@ -1,9 +1,25 @@
 import React from 'react';
-import {CardCity} from "../../types/commonTypes";
+import {CardCity} from "../../types/types";
 
-const MainCard: React.FC<CardCity> = ({imgPath, price, name, type}) => {
+type MainCardProps = CardCity & {
+  onCardHover: (point: { lat: number; lng: number; title: string } | undefined) => void;
+};
+
+const MainCard = (props: MainCardProps) => {
+  const { id, imgPath, price, name, type, lat, lng, onCardHover } = props;
+
+  const handleMouseEnter = () => {
+    onCardHover({ lat, lng, title: name });
+  };
+
+  const handleMouseLeave = () => {
+    onCardHover(undefined);
+  };
+
   return (
-    <article className="cities__card place-card">
+    <article className="cities__card place-card"
+             onMouseEnter={handleMouseEnter}
+             onMouseLeave={handleMouseLeave}>
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
           <img className="place-card__image" src={imgPath} width="260" height="200" alt="Place image"/>
