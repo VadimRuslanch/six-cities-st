@@ -1,0 +1,4 @@
+ESLINT_NO_DEV_ERRORS=false
+REACT_APP_BASE_URL=https://11.react.htmlacademy.pro/six-cities
+TIMEOUT=5000
+AUTH_TOKEN=MY-TOKEN
